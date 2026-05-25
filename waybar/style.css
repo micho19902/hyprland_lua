@@ -1,0 +1,110 @@
+@import url('colors/color.css');
+
+
+* {
+    all: unset;
+    font-family: 'Iosevka Nerd Font Propo', monospace;
+    font-weight: bold;
+    /* font-size: 25px; */
+}
+tooltip {
+    background-color: #1d2021; /* Fondo semi-transparente */
+    border-radius: 10px;
+    /* border: 1px solid #ffffff; */
+}
+
+/* Estilos para el texto dentro del tooltip (¡Esta es la parte clave!) */
+tooltip label {
+    color: #ffffff;          /* Color del texto */
+    font-size: 14px;        /* Tamaño de la fuente */
+    padding: 4px 8px;       /* Espaciado interno */
+    margin: 2px;            /* Espaciado externo */
+    background-color: transparent; /* Hereda el fondo del contenedor */
+}
+window#waybar {
+    background-color: #1d2021;
+    color: #00a6ff;
+    border-radius: 10px;
+
+}
+
+#tray menu {
+    background-color: #1d2021 ;
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 12px;
+    color: #ffffff;
+}
+#workspaces {
+    min-width: 100px;
+    font-size: 20px;
+    padding: 2px 2px;
+    margin: 0px 10px;
+    border-radius: 99px;
+}
+
+#workspaces button {
+    /* background-color: @bg4; */
+    /* color: transparent; */
+    padding: 0 5px;
+    border-radius: 99px;
+}
+
+#workspaces button.active {
+    /* background-color: #7daea3; */
+    /* border-radius: 1px solid; */
+    color: #00ff22;
+    min-width: 1.2rem;
+    font-weight: 800;
+    transition: none;
+}
+
+#battery {
+    font-size: 1.12rem;
+}
+
+#clock,
+#clock#right {
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.12rem;
+}
+
+.modules-left {
+    margin-left: 12px;
+    font-size: 1.12rem;
+
+}
+.modules-right {
+    margin-right: 12px;
+    font-size: 1.12rem;
+    /* padding: 10px; */
+    
+}
+
+#cava {
+    margin: 0 12px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+#cpu {
+    margin-right: 12px;
+}
+
+#memory {
+    margin-right: 12px;
+}
+
+#network {
+    margin-right: 12px;
+}
+
+#backlight {
+    margin-right: 12px;
+}
+
+#language {
+    margin-right: 12px;
+}

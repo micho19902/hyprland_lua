@@ -1,0 +1,11 @@
+require('modules.monitor')
+require('modules.binds')
+require('modules.autostart')
+require('modules.env')
+require('modules.perms')
+require('modules.decorations')
+require('modules.layouts')
+require('modules.misc')
+require('modules.input')
+require('modules.windowsrules')
+

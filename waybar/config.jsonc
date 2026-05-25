@@ -1,0 +1,217 @@
+{
+    "layer": "top",
+    "width": 1900,
+    "output": "eDP-1",
+    "margin-top": 2,
+    "modules-left": [
+        "pulseaudio",
+        "cava",
+        "tray"
+        // "bluetooth"
+    ],
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces",
+        "clock#right"
+    ],
+    "modules-right": [
+        "network",
+        "cpu",
+        "memory",
+        "backlight",
+        "hyprland/language",
+        "power-profiles-daemon",
+        // "keyboard-state",
+        "battery"
+    ],
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            // "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "show-passive-items": false
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": false,
+        "format": "{}",
+        "format-icons": {
+            "locked": "Num",
+            "unlocked": ""
+        }
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-es": "es",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "bluetooth": {
+        "format": "",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "network": {
+        "interval": 1,
+        // "interface": "wlp2s0",
+        "format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "",
+        "tooltip-format-wifi": "{ipaddr}",
+        "tooltip-format-ethernet": "{ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "{} ",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "battery": {
+        // "bat": "BAT2",
+        "interval": 1,
+        "format": " {icon} {capacity}%",
+        "format-icons": {
+            "default": [
+                "󰂎",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ],
+            "charging": [
+                "󰢟",
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ]
+        }
+    },
+    "clock": {
+        "format": "{:%H}"
+    },
+    "clock#right": {
+        "format": "{:%M}"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
+        },
+        "persistent-workspaces": {
+            "*": 5,
+            "eDP-1": 5
+        }
+    },
+    "pulseaudio": {
+        "format": " {icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            // "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            // "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    },
+    "cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 0,
+        "sensitivity": 0.01,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "hide_on_silence": false,
+        // "format_silent": "quiet",
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.27,
+        "input_delay": 2,
+        "format-icons": [
+            "▁",
+            "▂",
+            "▃",
+            "▄",
+            "▅",
+            "▆",
+            "▇",
+            "█"
+        ],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    }
+}
