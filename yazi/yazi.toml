@@ -18,10 +18,10 @@ scrolloff      = 5
 mouse_events   = [ "click", "scroll", "drag" ]
 
 [preview]
-wrap            = "no"
+wrap            = "yes"
 tab_size        = 2
-max_width       = 600
-max_height      = 900
+max_width       = 1200
+max_height      = 1800
 cache_dir       = ""
 image_delay     = 30
 image_filter    = "triangle"
@@ -31,12 +31,23 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = "code %s", desc = "$EDITOR",      for = "unix", block = true },
+	{ run = "xdg-open %s1", desc = "$EDITOR",      for = "unix", block = true },
 	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
 	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
 ]
+
+pdf = [
+    { run = 'okular "$@" & disown', desc = "Abrir con Zathura", mime = "application/pdf" },
+    # { run = 'evince "$@"', desc = "Abrir con Evince", mime = "application/pdf" },
+    # { run = 'tdf "$@"', desc = "Abrir en terminal con tdf", mime = "application/pdf" },
+]
+
+office = [
+    { run = 'onlyoffice-desktopeditors "$(realpath "$1")" & disown', desc = "Abrir con ONLYOFFICE", mime = "application/{msword,vnd.ms-excel,vnd.ms-powerpoint,vnd.openxmlformats-officedocument.*}" },
+]
+
 play = [
-	{ run = "vlc %s1",    desc = "Play", for = "linux", orphan = true },
+	{ run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },
 	{ run = "open %s",         desc = "Play", for = "macos" },
 	{ run = 'start "" %s1',    desc = "Play", for = "windows", orphan = true },
 	{ run = "termux-open %s1", desc = "Play", for = "android" },
@@ -44,8 +55,7 @@ play = [
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
 open = [
-	{ run = "qimgv %s1",    desc = "Open", for = "linux" },
-	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
+	{ run = "qimgv %s",    desc = "Open", for = "linux" },
 	{ run = "open %s",         desc = "Open", for = "macos" },
 	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
 	{ run = "termux-open %s1", desc = "Open", for = "android" },
@@ -84,6 +94,8 @@ rules = [
 	# Virtual file system
 	{ mime = "vfs/{absent,stale}", use = "download" },
 	# Fallback
+	{ mime = "application/pdf", use = "pdf" },
+	{ url = "*.{doc,docx,xls,xlsx,ppt,pptx}", use = "office" },
 	{ url = "*", use = [ "open", "reveal" ] },
 ]
 
@@ -99,47 +111,6 @@ image_bound      = [ 10000, 10000 ]
 suppress_preload = false
 
 [plugin]
-  prepend_preloaders = [
-    # Replace magick, image, video with mediainfo
-    { mime = "{audio,video,image}/*", run = "mediainfo" },
-    { mime = "application/subrip", run = "mediainfo" },
-
-    # Adobe Photoshop is image/adobe.photoshop, already handled above
-    # Adobe Illustrator
-   
-    # Sometimes AI file is recognized as "application/pdf". Lmao.
-    # In this case use file extension instead:
-    { url = "*.{ai,eps,ait}", run = "mediainfo" },
-	
-    # Hide metadata by default.
-    # Example for image mimetype:
-    { mime = "{image}/*", run = "mediainfo --no-metadata" },
-
-    # Hide image preview by default.
-    # Example for video mimetype:
-    { mime = "{video}/*", run = "mediainfo --no-preview" },
-
-    # NOTE: Use both --no-metadata and --no-preview will display nothing. :)
-    # Make sure both of your previewers and preloaders has the same arguments (--no-metadata and --no-preview)
-  ]
-
-  prepend_previewers = [
-    # Replace magick, image, video with mediainfo
-    { mime = "{audio,video,image}/*", run = "mediainfo"},
-    { mime = "application/subrip", run = "mediainfo" },
-
-   
-   ]
-
-  # There are more extensions, mime types which are supported by mediainfo.
-  # Just add file's MIME type to `previewers`, `preloaders` above.
-  # https://mediaarea.net/en/MediaInfo/Support/Formats
-  # If it's not working, file an issue at https://github.com/boydaihungst/mediainfo.yazi/issues
-
-# For a large file like Adobe Illustrator, Adobe Photoshop, etc
-# you may need to increase the memory limit if no image is rendered.
-# https://yazi-rs.github.io/docs/configuration/yazi#tasks
-
 fetchers = [
 	# MIME-type
 	{ url = "*/",         run = "mime.dir",    prio = "high", group = "mime" },
