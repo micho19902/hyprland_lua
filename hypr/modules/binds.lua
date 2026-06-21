@@ -25,6 +25,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd('hyprlock'))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd('/home/mich/.config/waybar/scripts/launch.sh'))
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())

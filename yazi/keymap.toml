@@ -9,6 +9,11 @@
 on  = "M"
 run = "plugin mount"
 
+[[manager.prepend_keymap]]
+on = [ "n", "m" ]
+run = "plugin gvfs --select-then-mount --jump"
+desc = "Montar dispositivo y saltar a su punto de montaje"
+
 [[mgr.prepend_keymap]]
 on   = [ "C", "a", "a" ]
 run  = "plugin compress"
@@ -33,6 +38,12 @@ desc = "Archive selected files (compression level)"
 on   = [ "C", "a", "u" ]
 run  = "plugin compress -phl"
 desc = "Archive selected files (password+header+level)"
+
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "m" ]
+run  = "cd /run/user/1000/gvfs"
+desc = "Go Movils"
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
@@ -102,8 +113,8 @@ keymap = [
 	{ on = "<C-->",     run = "hardlink",                    desc = "Hardlink yanked files" },
 	{ on = "Y",         run = "unyank",                      desc = "Cancel the yank status" },
 	{ on = "X",         run = "unyank",                      desc = "Cancel the yank status" },
-	{ on = "d",         run = "remove",                      desc = "Trash selected files" },
-	{ on = "D",         run = "remove --permanently",        desc = "Permanently delete selected files" },
+	{ on = "d",         run = "remove --permanently",                      desc = "Trash selected files" },
+	{ on = "D",         run = "remove",        desc = "Permanently delete selected files" },
 	{ on = "a",         run = "create",                      desc = "Create a file (ends with / for directories)" },
 	{ on = "r",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
 	{ on = ";",         run = "shell --interactive",         desc = "Run a shell command" },
@@ -157,6 +168,7 @@ keymap = [
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
+	{ on = [ "g", "m" ],       run = "cd /home/mich/Games",      desc = "Go ~/Games" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 

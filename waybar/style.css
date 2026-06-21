@@ -6,6 +6,7 @@
     font-family: 'Iosevka Nerd Font Propo', monospace;
     font-weight: bold;
     /* font-size: 25px; */
+    /* min-width: 10px; */
 }
 tooltip {
     background-color: #1d2021; /* Fondo semi-transparente */
@@ -22,7 +23,8 @@ tooltip label {
     background-color: transparent; /* Hereda el fondo del contenedor */
 }
 window#waybar {
-    background-color: #1d2021;
+    /* background-color: #1d2021; */
+    background-color: rgba(29, 32, 33, 0.85); /* 0.7 = 70% de opacidad, 30% transparente */
     color: #00a6ff;
     border-radius: 10px;
 
@@ -32,9 +34,10 @@ window#waybar {
     background-color: #1d2021 ;
     border-radius: 10px;
     border: 2px solid;
-    padding: 12px;
+    padding: 20px;
     color: #ffffff;
 }
+
 #workspaces {
     min-width: 100px;
     font-size: 20px;
@@ -59,6 +62,15 @@ window#waybar {
     transition: none;
 }
 
+#workspaces button.urgent {
+    color: red;
+}
+
+#power-profiles-daemon {
+    margin-right: 6px;
+    /* font-size: 1.12rem; */
+}
+
 #battery {
     font-size: 1.12rem;
 }
@@ -78,7 +90,6 @@ window#waybar {
 .modules-right {
     margin-right: 12px;
     font-size: 1.12rem;
-    /* padding: 10px; */
     
 }
 
@@ -91,6 +102,7 @@ window#waybar {
 
 #cpu {
     margin-right: 12px;
+    min-width: 10px;
 }
 
 #memory {
@@ -103,8 +115,36 @@ window#waybar {
 
 #backlight {
     margin-right: 12px;
+    /* min-width: 50px; */
 }
 
 #language {
     margin-right: 12px;
+}
+
+#pulseaudio {
+    min-width: 10px;
+}
+#pulseaudio-slider {
+    padding: 0;
+    margin: 12px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background: black;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: #00a6ff;
 }

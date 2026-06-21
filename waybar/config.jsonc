@@ -4,7 +4,9 @@
     "output": "eDP-1",
     "margin-top": 2,
     "modules-left": [
+        // "custom/arch",
         "pulseaudio",
+        "pulseaudio/slider",
         "cava",
         "tray"
         // "bluetooth"
@@ -82,7 +84,7 @@
     },
     "network": {
         "interval": 1,
-        // "interface": "wlp2s0",
+        // "interface": "",
         "format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
         "format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
         "format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
@@ -137,11 +139,55 @@
         }
     },
     "clock": {
-        "format": "{:%H}"
+        "format": "{:%H}",
+        // "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode"
+        }
     },
     "clock#right": {
-        "format": "{:%M}"
+        "format": "{:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode"
+        }
     },
+
+    "custom/arch": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/arch.sh",
+        "interval": "once",  // Solo se ejecuta una vez
+        "tooltip": false,     // Sin tooltip (opcional)
+        "on-click": ""  // Opcional: abre el lanzador al hacer clic
+    },
+
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -149,7 +195,7 @@
             "2": "",
             "3": "",
             "4": "",
-            "5": ""
+            "5": ""
         },
         "persistent-workspaces": {
             // "*": 5,
@@ -157,8 +203,8 @@
         }
     },
     "pulseaudio": {
-        "format": " {icon} {volume}%",
-        "format-bluetooth": " {volume}%",
+        "format": " {icon}",
+        "format-bluetooth": "",
         "format-muted": "",
         "format-icons": {
             // "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
@@ -180,6 +226,11 @@
         "ignored-sinks": [
             "Easy Effects Sink"
         ]
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
     },
     "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
