@@ -24,7 +24,7 @@ tooltip label {
 }
 window#waybar {
     /* background-color: #1d2021; */
-    background-color: rgba(29, 32, 33, 0.85); /* 0.7 = 70% de opacidad, 30% transparente */
+    background-color: rgba(29, 32, 33, 0.85); /*0.7 = 70% de opacidad, 30% transparente */
     color: #00a6ff;
     border-radius: 10px;
 
