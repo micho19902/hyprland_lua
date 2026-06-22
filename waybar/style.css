@@ -1,150 +1,176 @@
-@import url('colors/color.css');
-
+@import url("colors/color.css");
 
 * {
-    all: unset;
-    font-family: 'Iosevka Nerd Font Propo', monospace;
-    font-weight: bold;
-    /* font-size: 25px; */
-    /* min-width: 10px; */
+  all: unset;
+  font-family: "Iosevka Nerd Font Propo", monospace;
+  font-weight: bold;
+  /* font-size: 25px; */
+  /* min-width: 10px; */
 }
 tooltip {
-    background-color: #1d2021; /* Fondo semi-transparente */
-    border-radius: 10px;
-    /* border: 1px solid #ffffff; */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  border-radius: 10px;
+  /* border: 1px solid #ffffff; */
 }
 
 /* Estilos para el texto dentro del tooltip (¡Esta es la parte clave!) */
 tooltip label {
-    color: #ffffff;          /* Color del texto */
-    font-size: 14px;        /* Tamaño de la fuente */
-    padding: 4px 8px;       /* Espaciado interno */
-    margin: 2px;            /* Espaciado externo */
-    background-color: transparent; /* Hereda el fondo del contenedor */
+  color: #ffffff; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  padding: 4px 8px; /* Espaciado interno */
+  margin: 2px; /* Espaciado externo */
+  background-color: transparent; /* Hereda el fondo del contenedor */
 }
 window#waybar {
-    /* background-color: #1d2021; */
-    background-color: rgba(29, 32, 33, 0.85); /*0.7 = 70% de opacidad, 30% transparente */
-    color: #00a6ff;
-    border-radius: 10px;
-
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /*0.7 = 70% de opacidad, 30% transparente */
+  color: #ffffff;
+  border-radius: 10px;
 }
 
 #tray menu {
-    background-color: #1d2021 ;
-    border-radius: 10px;
-    border: 2px solid;
-    padding: 20px;
-    color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  /* border: 2px solid; */
+  padding: 20px;
+  color: #ffffff;
 }
 
 #workspaces {
-    min-width: 100px;
-    font-size: 20px;
-    padding: 2px 2px;
-    margin: 0px 10px;
-    border-radius: 99px;
+  min-width: 100px;
+  font-size: 20px;
+  padding: 2px 10px 0px 10px;
+  margin: 0px 10px;
+  border-radius: 99px;
+  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 #workspaces button {
-    /* background-color: @bg4; */
-    /* color: transparent; */
-    padding: 0 5px;
-    border-radius: 99px;
+  /* background-color: rgba(132, 71, 71, 0.7); */
+  /* color: transparent; */
+  padding: 0 5px;
+  border-radius: 99px;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 #workspaces button.active {
-    /* background-color: #7daea3; */
-    /* border-radius: 1px solid; */
-    color: #00ff22;
-    min-width: 1.2rem;
-    font-weight: 800;
-    transition: none;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  color: #00ff22;
+  font-size: 25px;
+  min-width: 1.2rem;
+  font-weight: 800;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  /* transform: scaleY(); */
 }
 
 #workspaces button.urgent {
-    color: red;
+  color: red;
 }
 
 #power-profiles-daemon {
-    margin-right: 6px;
-    /* font-size: 1.12rem; */
+  margin-right: 6px;
+  /* font-size: 1.12rem; */
 }
 
 #battery {
-    font-size: 1.12rem;
+  font-size: 1.12rem;
+}
+
+#battery.warning {
+  color: orange;
+}
+
+#battery.critical {
+  color: red;
 }
 
 #clock,
 #clock#right {
-    margin: 0 15px;
-    font-weight: 700;
-    font-size: 1.12rem;
+  margin: 0 15px;
+  font-weight: 700;
+  font-size: 1.12rem;
 }
 
 .modules-left {
-    margin-left: 12px;
-    font-size: 1.12rem;
-
+  margin-left: 12px;
+  font-size: 1.12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 99px;
+  padding: 0 20px 0 20px;
+  
 }
 .modules-right {
-    margin-right: 12px;
-    font-size: 1.12rem;
-    
+  margin-right: 12px;
+  font-size: 1.12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 99px;
+  padding: 0 20px 0 20px;
+}
+
+.modules-center {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 99px;
+  padding: 0 20px 0 20px;
 }
 
 #cava {
-    margin: 0 12px;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    color: #ffffff;
+  margin: 0 12px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 #cpu {
-    margin-right: 12px;
-    min-width: 10px;
+  margin-right: 12px;
+  min-width: 10px;
 }
 
 #memory {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 #network {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 #backlight {
-    margin-right: 12px;
-    /* min-width: 50px; */
+  margin-right: 12px;
+  /* min-width: 50px; */
 }
 
 #language {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 #pulseaudio {
-    min-width: 10px;
+  min-width: 10px;
 }
 #pulseaudio-slider {
-    padding: 0;
-    margin: 12px;
+  padding: 0;
+  margin: 12px;
 }
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 #pulseaudio-slider trough {
-    min-height: 10px;
-    min-width: 80px;
-    border-radius: 5px;
-    background: black;
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 5px;
+  background: black;
 }
 #pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background: #00a6ff;
+  min-width: 10px;
+  border-radius: 5px;
+  background: #00a6ff;
 }

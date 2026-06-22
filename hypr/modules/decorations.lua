@@ -11,8 +11,8 @@ hl.config({
         border_size = 1,
 
         col = {
-            active_border   = { colors = {"rgba(33ccffee)"} },
-            inactive_border = "rgba(595959aa)",
+            active_border   = { colors = {"rgba(0, 0, 0, 0.7)"} },
+            inactive_border = "rgba(0, 0, 0, 0.4)",
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -25,16 +25,16 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 5,
+        rounding       = 10,
         rounding_power = 2,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.9,
+        inactive_opacity = 0.5,
 
         shadow = {
             enabled      = true,
-            range        = 20,
+            range        = 100,
             render_power = 3,
             color        = 0xee0a0a0a,
         },
@@ -75,7 +75,7 @@ hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "
 hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 8, bezier = "easeOutQuint", style = "slidefade 20%" })
+-- hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
+-- hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })

@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "width": 1900,
+    "width": 1930,
     "output": "eDP-1",
     "margin-top": 2,
     "modules-left": [
@@ -20,8 +20,8 @@
         "network",
         "cpu",
         "memory",
-        "backlight",
-        "hyprland/language",
+        // "backlight",
+        // "hyprland/language",
         "power-profiles-daemon",
         // "keyboard-state",
         "battery"
@@ -85,25 +85,40 @@
     "network": {
         "interval": 1,
         // "interface": "",
-        "format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-        "format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format": " {essid}",
+        "format-wifi": " {essid}",
         "format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-        "format-disconnected": "", //An empty format will hide the module.
+        "format-disconnected": "󰤯", //An empty format will hide the module.
         "tooltip-format": "",
-        "tooltip-format-wifi": "{ipaddr}",
-        "tooltip-format-ethernet": "{ipaddr}",
+        "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50
     },
+//     "network": {
+//     "interface": "wlan0",
+//     "format": "{ifname}",
+//     "format-wifi": " {essid}",
+//     "format-ethernet": "{ipaddr}/{cidr}",
+//     "format-disconnected": "", //An empty format will hide the module.
+//     "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+//     "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+//     "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+//     "tooltip-format-disconnected": "Disconnected",
+//     "max-length": 50
+// },
     "cpu": {
         "interval": 1,
-        "format": "{} ",
-        "max-length": 10
+        "format": "{usage}% ",
+        "max-length": 10,
+        "on-click": "ghostty -e htop"
     },
     "memory": {
         "interval": 1,
-        "format": "{}% ",
-        "max-length": 10
+        "format": "{used} ",
+        "max-length": 10,
+        "on-click": "ghostty -e btop"
+        
     },
     "battery": {
         // "bat": "BAT2",
@@ -136,6 +151,10 @@
                 "󰂋",
                 "󰂅"
             ]
+        },
+        "states": {
+            "warning": 20,
+            "critical": 10
         }
     },
     "clock": {
