@@ -6,6 +6,7 @@ hl.config({
     input = {
         kb_layout  = "us,es",
         kb_options = "grp:alt_shift_toggle",
+        numlock_by_default = true,
 
         follow_mouse = 1,
 

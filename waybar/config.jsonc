@@ -109,13 +109,13 @@
 // },
     "cpu": {
         "interval": 1,
-        "format": "{usage}% ",
+        "format": "{usage:2}% ",
         "max-length": 10,
         "on-click": "ghostty -e htop"
     },
     "memory": {
         "interval": 1,
-        "format": "{used} ",
+        "format": "{used:4} ",
         "max-length": 10,
         "on-click": "ghostty -e btop"
         
@@ -123,7 +123,7 @@
     "battery": {
         // "bat": "BAT2",
         "interval": 1,
-        "format": " {icon} {capacity}%",
+        "format": " {icon} {capacity:3}%",
         "format-icons": {
             "default": [
                 "󰂎",
