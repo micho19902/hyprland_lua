@@ -4,7 +4,7 @@
     "output": "eDP-1",
     "margin-top": 2,
     "modules-left": [
-        // "custom/arch",
+        "custom/arch",
         "pulseaudio",
         "pulseaudio/slider",
         "cava",
@@ -84,29 +84,17 @@
     },
     "network": {
         "interval": 1,
-        // "interface": "",
-        "format": " {essid}",
+        // "interface": "wlan0",
+        "format": " {ifname}",
         "format-wifi": " {essid}",
-        "format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-ethernet": " {ifname}",
         "format-disconnected": "󰤯", //An empty format will hide the module.
         "tooltip-format": "",
-        "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-        "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}\n\n{ipaddr}\n{netmask}",
+        "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}\n\n{ipaddr}\n{netmask}",
         "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
+        "max-length": 80
     },
-//     "network": {
-//     "interface": "wlan0",
-//     "format": "{ifname}",
-//     "format-wifi": " {essid}",
-//     "format-ethernet": "{ipaddr}/{cidr}",
-//     "format-disconnected": "", //An empty format will hide the module.
-//     "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-//     "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-//     "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-//     "tooltip-format-disconnected": "Disconnected",
-//     "max-length": 50
-// },
     "cpu": {
         "interval": 1,
         "format": "{usage:2}% ",
@@ -115,10 +103,10 @@
     },
     "memory": {
         "interval": 1,
-        "format": "{used:4} ",
+        "format": "{used:4}GB ",
         "max-length": 10,
         "on-click": "ghostty -e btop"
-        
+
     },
     "battery": {
         // "bat": "BAT2",
@@ -199,13 +187,14 @@
         }
     },
 
-    "custom/arch": {
-        "format": "{}",
-        "exec": "~/.config/waybar/scripts/arch.sh",
-        "interval": "once",  // Solo se ejecuta una vez
-        "tooltip": false,     // Sin tooltip (opcional)
-        "on-click": ""  // Opcional: abre el lanzador al hacer clic
-    },
+    // "custom/arch": {
+    //     "format": "{}",
+    //     "exec": "~/.config/waybar/scripts/arch.sh",
+    //     "interval": "once",  // Solo se ejecuta una vez
+    //     "tooltip": false,     // Sin tooltip (opcional)
+    //     "on-click": ""  // Opcional: abre el lanzador al hacer clic
+    //     // "icon-size": 21
+    // },
 
     "hyprland/workspaces": {
         "format": "{icon}",

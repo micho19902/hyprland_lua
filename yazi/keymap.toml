@@ -9,8 +9,8 @@
 on  = "M"
 run = "plugin mount"
 
-[[manager.prepend_keymap]]
-on = [ "n", "m" ]
+[[mgr.prepend_keymap]]
+on = [ "N" ]
 run = "plugin gvfs --select-then-mount --jump"
 desc = "Montar dispositivo y saltar a su punto de montaje"
 
@@ -44,6 +44,19 @@ desc = "Archive selected files (password+header+level)"
 on   = [ "g", "m" ]
 run  = "cd /run/user/1000/gvfs"
 desc = "Go Movils"
+
+
+[[mgr.prepend_keymap]]
+    # Mount
+on = [ "Q", "m" ]
+run = "plugin gvfs -- select-then-mount"
+desc = "Select device then mount"
+
+
+[[mgr.prepend_keymap]]
+on = [ "Q", "u" ]
+run = "plugin gvfs -- select-then-unmount"
+desc = "Select device then unmount"
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },

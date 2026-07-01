@@ -4,39 +4,36 @@
   all: unset;
   font-family: "Iosevka Nerd Font Propo", monospace;
   font-weight: bold;
-  /* font-size: 25px; */
-  /* min-width: 10px; */
-}
+  }
 tooltip {
   background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
   border-radius: 10px;
-  /* border: 1px solid #ffffff; */
-}
+  }
 
 /* Estilos para el texto dentro del tooltip (¡Esta es la parte clave!) */
 tooltip label {
   color: #ffffff; /* Color del texto */
   font-size: 14px; /* Tamaño de la fuente */
-  padding: 4px 8px; /* Espaciado interno */
-  margin: 2px; /* Espaciado externo */
-  background-color: transparent; /* Hereda el fondo del contenedor */
-}
+  padding: 4px; /* Espaciado interno */
+  margin: 12px; /* Espaciado externo */
+  /* background-color: transparent; */
+  }
 window#waybar {
-  /* background-color: rgba(0, 0, 0, 0.7); */
   background-color: rgba(
     0,
     0,
     0,
     0
-  ); /*0.7 = 70% de opacidad, 30% transparente */
+  );  
   color: #ffffff;
   border-radius: 10px;
 }
-
+#tray {
+  margin-left: 8px;
+}
 #tray menu {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
-  /* border: 2px solid; */
   padding: 20px;
   color: #ffffff;
 }
@@ -47,16 +44,12 @@ window#waybar {
   padding: 2px 10px 0px 10px;
   margin: 0px 10px;
   border-radius: 99px;
-  /* background-color: rgba(0, 0, 0, 0.7); */
-}
+  }
 
 #workspaces button {
-  /* background-color: rgba(132, 71, 71, 0.7); */
-  /* color: transparent; */
-  padding: 0 5px;
+    padding: 0 5px;
   border-radius: 99px;
-  /* transition: all 0.3s ease-in-out; */
-}
+  }
 
 #workspaces button.active {
   background-color: rgba(0, 0, 0, 1);
@@ -65,9 +58,7 @@ window#waybar {
   font-size: 25px;
   min-width: 1.2rem;
   font-weight: 800;
-  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
-  /* transform: scaleY(); */
-}
+  }
 
 #workspaces button.urgent {
   color: red;
@@ -75,8 +66,8 @@ window#waybar {
 
 #power-profiles-daemon {
   margin-left: 8px;
-  /* font-size: 1.12rem; */
-}
+  min-width: 25px;
+  }
 
 #battery {
   font-size: 1.12rem;
@@ -143,16 +134,16 @@ window#waybar {
 
 #backlight {
   margin-right: 12px;
-  /* min-width: 50px; */
-}
+  }
 
 #language {
   margin-right: 12px;
 }
 
 #pulseaudio {
-  min-width: 10px;
+    min-width: 25px; 
 }
+
 #pulseaudio-slider {
   padding: 0;
   margin: 12px;
