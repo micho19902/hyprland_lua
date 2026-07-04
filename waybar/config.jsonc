@@ -105,7 +105,11 @@
         "interval": 1,
         "format": "{used:4}GB ",
         "max-length": 10,
-        "on-click": "ghostty -e btop"
+        "on-click": "ghostty -e btop",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
 
     },
     "battery": {

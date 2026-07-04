@@ -4,60 +4,36 @@
 #:schema https://yazi-rs.github.io/schemas/keymap.json
 
 [mgr]
+prepend_keymap = [
+    # ===== TUS ATAJOS ORIGINALES (añadidos) =====
+    { on = [ "M" ], run = "plugin mount" },
+    { on = [ "C", "a", "a" ], run = "plugin compress", desc = "Archive selected files" },
+    { on = [ "C", "a", "p" ], run = "plugin compress -p", desc = "Archive selected files (password)" },
+    { on = [ "C", "a", "h" ], run = "plugin compress -ph", desc = "Archive selected files (password+header)" },
+    { on = [ "C", "a", "l" ], run = "plugin compress -l", desc = "Archive selected files (compression level)" },
+    { on = [ "C", "a", "u" ], run = "plugin compress -phl", desc = "Archive selected files (password+header+level)" },
+    { on = [ "g", "m" ], run = "cd /run/user/1000/gvfs", desc = "Go Movils" },
 
-[[mgr.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
+    # ===== ATAJOS GVFS (con M → N) =====
+    { on = [ "N", "m" ], run = "plugin gvfs -- select-then-mount", desc = "Select device then mount" },
+    { on = [ "N", "m" ], run = "plugin gvfs -- select-then-mount --jump", desc = "Select device to mount and jump to its mount point" },
+    { on = [ "N", "R" ], run = "plugin gvfs -- remount-current-cwd-device", desc = "Remount device under cwd" },
+    { on = [ "N", "u" ], run = "plugin gvfs -- select-then-unmount", desc = "Select device then unmount" },
+    { on = [ "N", "u" ], run = "plugin gvfs -- select-then-unmount --eject", desc = "Select device then eject" },
+    { on = [ "N", "U" ], run = "plugin gvfs -- select-then-unmount --eject --force", desc = "Select device then force to eject/unmount" },
+    { on = [ "N", "a" ], run = "plugin gvfs -- add-mount", desc = "Add a GVFS mount URI" },
+    { on = [ "N", "e" ], run = "plugin gvfs -- edit-mount", desc = "Edit a GVFS mount URI" },
+    { on = [ "N", "r" ], run = "plugin gvfs -- remove-mount", desc = "Remove a GVFS mount URI" },
 
-[[mgr.prepend_keymap]]
-on = [ "N" ]
-run = "plugin gvfs --select-then-mount --jump"
-desc = "Montar dispositivo y saltar a su punto de montaje"
+    # ===== ATAJOS GVFS que no usan M (se mantienen) =====
+    { on = [ "g", "m" ], run = "plugin gvfs -- jump-to-device", desc = "Select device then jump to its mount point" },
+    { on = [ "g", "m" ], run = "plugin gvfs -- jump-to-device --automount", desc = "Automount then select device to jump to its mount point" },
+    { on = [ "`", "`" ], run = "plugin gvfs -- jump-back-prev-cwd", desc = "Jump back to the position before jumped to device" },
 
-[[mgr.prepend_keymap]]
-on   = [ "C", "a", "a" ]
-run  = "plugin compress"
-desc = "Archive selected files"
-
-[[mgr.prepend_keymap]]
-on   = [ "C", "a", "p" ]
-run  = "plugin compress -p"
-desc = "Archive selected files (password)"
-
-[[mgr.prepend_keymap]]
-on   = [ "C", "a", "h" ]
-run  = "plugin compress -ph"
-desc = "Archive selected files (password+header)"
-
-[[mgr.prepend_keymap]]
-on   = [ "C", "a", "l" ]
-run  = "plugin compress -l"
-desc = "Archive selected files (compression level)"
-
-[[mgr.prepend_keymap]]
-on   = [ "C", "a", "u" ]
-run  = "plugin compress -phl"
-desc = "Archive selected files (password+header+level)"
-
-
-[[mgr.prepend_keymap]]
-on   = [ "g", "m" ]
-run  = "cd /run/user/1000/gvfs"
-desc = "Go Movils"
-
-
-[[mgr.prepend_keymap]]
-    # Mount
-on = [ "Q", "m" ]
-run = "plugin gvfs -- select-then-mount"
-desc = "Select device then mount"
-
-
-[[mgr.prepend_keymap]]
-on = [ "Q", "u" ]
-run = "plugin gvfs -- select-then-unmount"
-desc = "Select device then unmount"
-
+    # ===== AUTOMOUNT (con N) =====
+    { on = [ "N", "t" ], run = "plugin gvfs -- automount-when-cd", desc = "Enable automount when cd to device under cwd" },
+    { on = [ "N", "T" ], run = "plugin gvfs -- automount-when-cd --disabled", desc = "Disable automount when cd to device under cwd" },
+]
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
