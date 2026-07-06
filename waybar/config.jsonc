@@ -10,7 +10,8 @@
     "custom/separator",
     "cava",
     "custom/separator",
-    "tray"
+    "tray",
+    "custom/notification"
     // "bluetooth"
   ],
   "modules-center": [
@@ -245,6 +246,26 @@
     "ignored-sinks": [
       "Easy Effects Sink"
     ]
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
   "pulseaudio/slider": {
     "min": 0,

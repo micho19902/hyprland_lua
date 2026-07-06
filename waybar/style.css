@@ -90,9 +90,13 @@ window#waybar {
   color: red;
 }
 
+#custom-notification {
+  margin-left: 12px;
+}
+
 #clock,
 #clock#right {
-  font-family: "Orbitron";
+
   margin: 0 15px;
   font-weight: bolder;
   font-size: 1.12rem;
