@@ -92,6 +92,7 @@ window#waybar {
 
 #clock,
 #clock#right {
+  font-family: "Orbitron";
   margin: 0 15px;
   font-weight: bolder;
   font-size: 1.12rem;
@@ -150,6 +151,7 @@ window#waybar {
 
 #custom-separator {
   margin: 0 12px;
+  font-size: 10px;
   color: gray;
 }
 
