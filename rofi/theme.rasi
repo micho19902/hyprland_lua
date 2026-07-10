@@ -14,7 +14,8 @@ window{
     width:                       90%;
     border-color:                transparent;
     transparency:                "real";
-    background-color:            #00000077;
+    background-color:            #00000090;
+    border-radius:               2em;
 }
 
 mainbox {
