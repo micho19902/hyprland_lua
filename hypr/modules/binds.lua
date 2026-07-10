@@ -35,6 +35,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("/home/mich/.config/waybar/scripts/la
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/mich/Programs/WhatsApp-2.0.0.AppImage"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("Telegram"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/mich/.config/wall-engine/wall2.sh"))
 
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 

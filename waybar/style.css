@@ -47,22 +47,27 @@ window#waybar {
   min-width: 100px;
   font-size: 20px;
   padding: 2px 10px 0px 10px;
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
   border-radius: 99px;
 }
 
 #workspaces button {
+  min-width: 20px;
   padding: 0 10px;
   border-radius: 20px;
+  /* background: transparent; */
+  /* min-width: 40px; */
   transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.active {
-  background-color: rgb(161, 177, 236);
+  background: #EEAECA;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  /* background-color: rgb(161, 177, 236); */
   border-radius: 20px;
   color: rgb(0, 0, 0);
   /* font-size: 25px; */
-  min-width: 1.2rem;
+  min-width: 40px;
   font-weight: 800;
 }
 
@@ -92,6 +97,11 @@ window#waybar {
 
 #custom-notification {
   margin-left: 12px;
+}
+
+#custom-pacman {
+  color: orange;
+  margin-right: 12px;
 }
 
 #clock,
@@ -124,6 +134,7 @@ window#waybar {
 .modules-center {
   background-color: rgb(42, 41, 41);
   border-radius: 99px;
+  /* min-width: 450px; */
   padding: 0 20px 0 20px;
 }
 

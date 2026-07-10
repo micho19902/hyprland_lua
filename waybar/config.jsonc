@@ -2,7 +2,7 @@
   "layer": "top",
   "width": 1930,
   "output": "eDP-1",
-  "margin-top": 2,
+  "margin-top": 4,
   "modules-left": [
     "custom/arch",
     "pulseaudio",
@@ -11,8 +11,9 @@
     "cava",
     "custom/separator",
     "tray",
-    "custom/notification"
-    // "bluetooth"
+    "custom/notification",
+    // "custom/weather"
+    "bluetooth"
   ],
   "modules-center": [
     "clock",
@@ -22,6 +23,7 @@
     "clock#right"
   ],
   "modules-right": [
+    "custom/pacman",
     "network",
     "custom/separator",
     "cpu",
@@ -33,6 +35,22 @@
     // "keyboard-state",
     "battery"
   ],
+  "custom/weather": {
+    "exec": "${HOME}/.config/waybar/scripts/weather.sh Havana+Cuba",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
+  },
+  "custom/pacman": {
+    "format": "󰅧 {}",
+    "interval": 60,
+    "exec": "~/.config/waybar/scripts/pacman.sh",
+    "on-click": "ghostty -e sudo pacman -Syu --noconfirm; pkill -SIGRTMIN+8 waybar",
+    "signal": 8,
+    "tooltip-format": "{} actualizaciones disponibles",
+    "return-type": "text"
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
