@@ -11,9 +11,9 @@
     "cava",
     "custom/separator",
     "tray",
-    "custom/notification",
+    "custom/notification"
     // "custom/weather"
-    "bluetooth"
+    // "bluetooth"
   ],
   "modules-center": [
     "clock",

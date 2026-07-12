@@ -6,8 +6,10 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 #end
 
-abbr -a Yy yay -Sy
-abbr -a y yay -Ssy
-abbr -a S sudo pacman -Ssy
-abbr -a Ss sudo pacman -Sy
+abbr -a yyu yay -Syu --noconfirm
+abbr -a yy yay -Sy --noconfirm
+abbr -a y yay --noconfirm
+# abbr -a S sudo pacman -Ssy --noconfirm
+# abbr -a Ss sudo pacman -Sy --noconfirm
+# abbr -a Ssu sudo pacman -Syu --noconfirm
 starship init fish | source

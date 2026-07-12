@@ -29,7 +29,28 @@ frame {
 }
 
 inputbar {
-enabled: false;
+  enabled: false;
+  background-color: rgba(47, 142, 229, 0.2);        /* mismo fondo que los elementos */
+  border-radius: 2em;               /* mismo redondeo */
+  padding: 1em;                     /* espacio interno */
+  margin: 0.5em 0;                  /* separación vertical con la lista */
+  text-color: white;
+  children: [ "prompt", "entry" ];  /* opcional: puedes reordenar */
+}
+
+// Estilo del campo de texto (entrada)
+entry {
+  background-color: transparent;
+  text-color: white;
+  placeholder-color: rgba(47, 142, 229, 0.2);
+  // padding: 0.5em;
+}
+
+// Estilo de la etiqueta (prompt), si la usas
+prompt {
+  background-color: transparent;
+  text-color: white;
+  // padding: 0 0.5em;
 }
 
 // Lists //
@@ -57,7 +78,7 @@ element {
   orientation: vertical;
   spacing: 0px;
   padding: 0px;
-  background-color: transparent;
+  background-color: rgba(47, 142, 229, 0.2);
   border-radius: 2em;
 }
 
@@ -67,7 +88,7 @@ element selected {
 }
 
 element-icon {
-  size: 26.5em;
+  size: 18em;
   border-radius: 2em 2em 0 0;
   margin: 0;
   padding: 0;
