@@ -39,7 +39,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("ghostty -e bluetui"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("Telegram"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/mich/.config/wall-engine/wall2.sh"))
 
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 
 hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
 
