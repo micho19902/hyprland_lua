@@ -33,7 +33,9 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(powermenu))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("/home/mich/.config/waybar/scripts/launch.sh"))
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/mich/Programs/WhatsApp-2.0.0.AppImage"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("zapzap"))
+-- hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("/home/mich/Programs/WhatsApp-2.0.0.AppImage"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("ghostty -e bluetui"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("Telegram"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/mich/.config/wall-engine/wall2.sh"))
 
