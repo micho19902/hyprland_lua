@@ -44,7 +44,7 @@
   },
   "custom/pacman": {
     "format": "󰅧 {}",
-    "interval": 60,
+    "interval": 3600,
     "exec": "~/.config/waybar/scripts/pacman.sh",
     "on-click": "ghostty -e sudo pacman -Syu --noconfirm; pkill -SIGRTMIN+8 waybar",
     "signal": 8,
@@ -233,7 +233,7 @@
       "2": "",
       "3": "",
       "4": "",
-      "5": ""
+      "5": ""
     },
     "persistent-workspaces": {
       // "*": 5,

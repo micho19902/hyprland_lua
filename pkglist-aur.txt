@@ -1,0 +1,17 @@
+adwaita-dark
+balena-etcher
+bibata-cursor-theme
+google-chrome
+hyprls
+peazip-qt-bin
+proton-authenticator-bin
+proton-vpn-qt-app
+qimgv-git
+rustdesk-bin
+termite
+ttf-orbitron
+visual-studio-code-bin
+waybar-cava
+windterm-bin
+zapzap
+zoom
