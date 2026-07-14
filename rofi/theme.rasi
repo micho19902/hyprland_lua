@@ -1,6 +1,6 @@
 configuration {
 show-icons: true;
-font: "JetBrainsMono Nerd Font 10";
+font: "Iosevka 10";
 drun-display-format: "{icon} {name}";
 }
 
@@ -29,8 +29,10 @@ frame {
 }
 
 inputbar {
-  enabled: false;
-  background-color: rgba(47, 142, 229, 0.2);        /* mismo fondo que los elementos */
+  enabled: true;
+  // border: 1;
+  // border-color: white;
+  background-color: rgba(47, 142, 229, 0.1);        /* mismo fondo que los elementos */
   border-radius: 2em;               /* mismo redondeo */
   padding: 1em;                     /* espacio interno */
   margin: 0.5em 0;                  /* separación vertical con la lista */
