@@ -4,55 +4,37 @@
   "output": "eDP-1",
   "margin-top": 4,
   "modules-left": [
-    "custom/arch",
-    "clock",
-    "mpris",
-    // "pulseaudio/slider",
-    // "custom/separator",
-    // "cava",
-    // "custom/separator",
-    "tray"
-    // 
+    // "custom/arch",
+    "pulseaudio",
+    "pulseaudio/slider",
+    "custom/separator",
+    "cava",
+    "custom/separator",
+    "tray",
+    "custom/notification"
     // "custom/weather"
     // "bluetooth"
   ],
   "modules-center": [
-    //,
-    // "custom/separator",
-    "custom/notification",
+    "clock",
+    "custom/separator",
     "hyprland/workspaces",
-    "power-profiles-daemon"
-    // "custom/separator"
-    // "clock#right"
+    "custom/separator",
+    "clock#right"
   ],
   "modules-right": [
     "custom/pacman",
-    "pulseaudio",
     "network",
-    // "custom/separator",
-    // "cpu",
-    // "memory",
-    // "custom/separator",
-    // // "backlight",
-    // // "hyprland/language",
-    // ,
+    "custom/separator",
+    "cpu",
+    "memory",
+    "custom/separator",
+    // "backlight",
+    // "hyprland/language",
+    "power-profiles-daemon",
     // "keyboard-state",
-    
     "battery"
   ],
-  "mpris": {
-  "max-length": 20,
-	"format": "{player_icon} {dynamic}",
-	"format-paused": "{status_icon} {dynamic}",
-	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸"
-	}
-	// "ignored-players": ["firefox"]
-},
   "custom/weather": {
     "exec": "${HOME}/.config/waybar/scripts/weather.sh Havana+Cuba",
     "return-type": "json",
@@ -129,7 +111,7 @@
     "interval": 1,
     // "interface": "wlan0",
     "format": " {ifname}",
-    "format-wifi": "󰤥 {essid}",
+    "format-wifi": " {essid}",
     "format-ethernet": " {ifname}",
     "format-disconnected": "󰤯", //An empty format will hide the module.
     "tooltip-format": "",
@@ -192,7 +174,7 @@
     }
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%H}",
     // "format-alt": "{:%A, %B %d, %Y (%R)}  ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -232,14 +214,14 @@
       "on-click-right": "mode"
     }
   },
-  "custom/arch": {
-      "format": "{}",
-      "exec": "~/.config/waybar/scripts/arch.sh",
-      "interval": "once",  // Solo se ejecuta una vez
-      "tooltip": false,     // Sin tooltip (opcional)
-      "on-click": ""  // Opcional: abre el lanzador al hacer clic
-      // "icon-size": 21
-  },
+  // "custom/arch": {
+  //     "format": "{}",
+  //     "exec": "~/.config/waybar/scripts/arch.sh",
+  //     "interval": "once",  // Solo se ejecuta una vez
+  //     "tooltip": false,     // Sin tooltip (opcional)
+  //     "on-click": ""  // Opcional: abre el lanzador al hacer clic
+  //     // "icon-size": 21
+  // },
   "custom/separator": {
     "format": "{}",
     "exec": "~/.config/waybar/scripts/separator.sh"
@@ -259,9 +241,8 @@
     }
   },
   "pulseaudio": {
-    "min-length": 8,
-    "format": " {icon} {volume}%",
-    "format-bluetooth": " {volume}%",
+    "format": " {icon}",
+    "format-bluetooth": "",
     "format-muted": "",
     "format-icons": {
       // "alsa_output.pci-0000_00_1f.3.analog-stereo": "",

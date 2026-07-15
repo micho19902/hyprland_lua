@@ -44,10 +44,10 @@ hl.window_rule({
 	float = true,
 })
 
-hl.window_rule({
-	name = "apply-something",
-	match = {
-		class = "sway-control-center",
-	},
-	float = true,
-})
+-- hl.window_rule({
+-- 	name = "apply-something",
+-- 	match = {
+-- 		class = "",
+-- 	},
+-- 	opacity = 0.5,
+-- })
