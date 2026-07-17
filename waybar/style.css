@@ -35,7 +35,20 @@ window#waybar {
   padding: 0px 10px;
   color: #00a6ff;
 }
-
+#custom-waybar-scrolling-mpris {
+  border-radius: 99px;
+  background-color: rgba(42, 41, 41, 1);
+  border-radius: 99px;
+  padding: 0px 10px;
+  margin: 0 8px;
+  
+}
+#volumen {
+  background-color: rgba(42, 41, 41, 1);
+  border-radius: 99px;
+  padding: 0px 10px;
+  margin: 0px 8px;
+}
 #tray menu {
   background-color: rgb(51, 55, 59);
   border-radius: 10px;
@@ -44,6 +57,7 @@ window#waybar {
 }
 #custom-arch {
   border-radius: 99px;
+  font-size: 20;
   background-color: rgba(42, 41, 41, 1);
   border-radius: 99px;
   padding: 0px 10px;
@@ -63,8 +77,9 @@ window#waybar {
 #workspaces button {
   min-width: 20px;
   padding: 0 10px;
-  border-radius: 20px;
-  margin: 2px 0px;
+  border-radius: 10px;
+  background-color: rgba(148, 187, 233, 0.100);
+  margin: 2px 1px;
   /* background: transparent; */
   /* min-width: 40px; */
   transition: all 0.2s ease-in-out;
@@ -211,7 +226,7 @@ window#waybar {
   color: rgb(106, 230, 106);
   background-color: rgba(42, 41, 41, 1);
   border-radius: 99px;
-  padding: 0px 12px; 
+  /* padding: 0px 8px;  */
 }
 
 #pulseaudio-slider {

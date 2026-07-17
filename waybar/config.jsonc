@@ -6,40 +6,36 @@
   "modules-left": [
     "custom/arch",
     "clock",
-    "mpris",
-    // "pulseaudio/slider",
-    // "custom/separator",
-    // "cava",
-    // "custom/separator",
-    "tray"
-    // 
-    // "custom/weather"
-    // "bluetooth"
+    "tray",
+    // "mpris"
+    "custom/waybar-scrolling-mpris"
   ],
   "modules-center": [
-    //,
-    // "custom/separator",
     "custom/notification",
     "hyprland/workspaces",
     "power-profiles-daemon"
-    // "custom/separator"
-    // "clock#right"
-  ],
+    ],
   "modules-right": [
     "custom/pacman",
-    "pulseaudio",
+    "group/volumen",
     "network",
-    // "custom/separator",
-    // "cpu",
-    // "memory",
-    // "custom/separator",
-    // // "backlight",
-    // // "hyprland/language",
-    // ,
-    // "keyboard-state",
-    
     "battery"
   ],
+  "group/volumen": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 250,
+        "children-class": "drawer-child"
+    },
+    "modules": [
+        // "clock",        // <-- Este es el líder, siempre visible
+        // "network",      // <-- Estos son los hijos,
+        "pulseaudio",   //     se ocultan hasta hacer hover
+        "pulseaudio/slider"
+        // "cpu",
+        // "memory"
+    ]
+},
   "mpris": {
   "max-length": 20,
 	"format": "{player_icon} {dynamic}",
@@ -51,7 +47,6 @@
 	"status-icons": {
 		"paused": "⏸"
 	}
-	// "ignored-players": ["firefox"]
 },
   "custom/weather": {
     "exec": "${HOME}/.config/waybar/scripts/weather.sh Havana+Cuba",
@@ -131,12 +126,12 @@
     "format": " {ifname}",
     "format-wifi": "󰤥 {essid}",
     "format-ethernet": " {ifname}",
-    "format-disconnected": "󰤯", //An empty format will hide the module.
+    "format-disconnected": "󰤭", //An empty format will hide the module.
     "tooltip-format": "",
     "tooltip-format-wifi": " {bandwidthUpBytes}  {bandwidthDownBytes}\n\n{ipaddr}\n{netmask}",
     "tooltip-format-ethernet": " {bandwidthUpBytes}  {bandwidthDownBytes}\n\n{ipaddr}\n{netmask}",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 80
+    "max-length": 50
   },
   "cpu": {
     "interval": 1,
@@ -144,6 +139,17 @@
     "max-length": 10,
     "on-click": "ghostty -e htop"
   },
+  "custom/waybar-scrolling-mpris": {
+    "format": "{}",
+    "display-format": "{icon}  {artist} - {title}",
+    "exec": "~/.config/waybar/scripts/waybar-scrolling-mpris /home/mich/.config/waybar/config.jsonc",
+    "icons": {
+        "Paused": "⏸",
+        "Playing": "▶",
+        "Stopped": "■"
+    },
+    "length": 30
+},
   "memory": {
     "interval": 1,
     "format": "{used:4}GB ",
@@ -237,7 +243,7 @@
       "exec": "~/.config/waybar/scripts/arch.sh",
       "interval": "once",  // Solo se ejecuta una vez
       "tooltip": false,     // Sin tooltip (opcional)
-      "on-click": ""  // Opcional: abre el lanzador al hacer clic
+      "on-click": "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh"  // Opcional: abre el lanzador al hacer clic
       // "icon-size": 21
   },
   "custom/separator": {
