@@ -19,7 +19,7 @@
     "custom/pacman",
     "group/volumen",
     "network",
-    "battery"
+    "group/performance"
   ],
   "group/volumen": {
     "orientation": "inherit",
@@ -34,6 +34,21 @@
         "pulseaudio/slider"
         // "cpu",
         // "memory"
+    ]
+},
+"group/performance": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 250,
+        "children-class": "drawer-child"
+    },
+    "modules": [
+        // "clock",        // <-- Este es el líder, siempre visible
+        "battery",      // <-- Estos son los hijos,
+        // "pulseaudio",   //     se ocultan hasta hacer hover
+        // "pulseaudio/slider"
+        "cpu",
+        "memory"
     ]
 },
   "mpris": {

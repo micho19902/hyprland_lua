@@ -8,7 +8,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 abbr -a yyu yay -Syu --noconfirm
 abbr -a y yay -Ssy
-abbr -a yy yay --noconfirm
+abbr -a yy yay --noconfirm --needed
 # abbr -a S sudo pacman -Ssy --noconfirm
 # abbr -a Ss sudo pacman -Sy --noconfirm
 # abbr -a Ssu sudo pacman -Syu --noconfirm
