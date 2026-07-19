@@ -4,10 +4,6 @@ configuration {
     icon-theme: "Papirus";
 }
 
-
-
-
-
 window {
     background-color: rgba(42, 41, 41, 0.67);
     // border-color: #00000000;
