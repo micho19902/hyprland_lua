@@ -50,5 +50,10 @@ SELECTED=$(echo -e "$MENU_ITEMS" | rofi -dmenu -i -p "Perfil de energía: " -the
 # Si se seleccionó un perfil y es diferente al actual, cambiarlo
 if [ -n "$SELECTED" ] && [ "$SELECTED" != "$CURRENT" ]; then
     powerprofilesctl set "$SELECTED"
+    if [ "$SELECTED" == "power-saver" ]; then
+        brightnessctl set 100
+    else
+        brightnessctl set 96000
+    fi
     notify-send -u normal "Perfil de energía" "Cambiado a $SELECTED" -t 3000
 fi

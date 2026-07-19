@@ -9,7 +9,7 @@ configuration {
 
 
 window {
-    background-color: rgba(42, 41, 41, 0.42);
+    background-color: rgba(42, 41, 41, 0.67);
     // border-color: #00000000;
     border-radius: 16px;
     padding: 16px;
