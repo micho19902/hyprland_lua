@@ -9,6 +9,7 @@ local fileManager = "ghostty -e yazi"
 -- local menu        = "rofi -show drun"
 local menu = "/home/mich/.config/rofi/launchers/type-6/launcher.sh"
 local powermenu = "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh"
+local performance = "/home/mich/.config/rofi/scripts/performance.sh"
 local volume_level = "wpctl get-volume 65"
 
 ---------------------
@@ -30,6 +31,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(powermenu))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(performance))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("/home/mich/.config/waybar/scripts/launch.sh"))
 -- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
