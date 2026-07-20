@@ -31,6 +31,7 @@ window#waybar {
   padding: 0px 10px;
   color: #00a6ff;
 }
+
 #custom-waybar-scrolling-mpris {
   border-radius: 99px;
   background-color: rgba(42, 41, 41, 0.8);
@@ -38,24 +39,33 @@ window#waybar {
   padding: 0px 10px;
   margin: 0 8px;
 }
+
+#temperature {
+  color: rgba(253, 0, 237, 0.8);
+  margin: 0px 8px;
+}
+
 #volumen {
   background-color: rgba(42, 41, 41, 0.8);
   border-radius: 99px;
   padding: 0px 10px;
   /* margin: 0px 8px; */
 }
+
 #performance {
   background-color: rgba(42, 41, 41, 0.8);
   border-radius: 99px;
   padding: 0px 10px;
   margin: 0px 8px;
 }
+
 #tray menu {
   background-color: rgb(51, 55, 59);
   border-radius: 10px;
   padding: 10px;
   color: #ffffff;
 }
+
 #custom-arch {
   border-radius: 99px;
   font-size: 20;
@@ -64,6 +74,7 @@ window#waybar {
   padding: 0px 10px;
   color: #00a6ff;
 }
+
 #workspaces {
   min-width: 100px;
   font-size: 20px;
@@ -137,6 +148,7 @@ window#waybar {
   border-radius: 99px;
   padding: 0px 12px;
 }
+
 #mpris {
   background-color: rgba(42, 41, 41, 0.8);
   border-radius: 99px;

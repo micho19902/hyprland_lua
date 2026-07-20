@@ -14,7 +14,7 @@
     "custom/notification",
     "hyprland/workspaces",
     "power-profiles-daemon"
-    ],
+  ],
   "modules-right": [
     "custom/pacman",
     "group/volumen",
@@ -24,45 +24,53 @@
   "group/volumen": {
     "orientation": "inherit",
     "drawer": {
-        "transition-duration": 250,
-        "children-class": "drawer-child"
+      "transition-duration": 250,
+      "children-class": "drawer-child"
     },
     "modules": [
-        // "clock",        // <-- Este es el líder, siempre visible
-        // "network",      // <-- Estos son los hijos,
-        "pulseaudio",   //     se ocultan hasta hacer hover
-        "pulseaudio/slider"
-        // "cpu",
-        // "memory"
+      // "clock",        // <-- Este es el líder, siempre visible
+      // "network",      // <-- Estos son los hijos,
+      "pulseaudio", //     se ocultan hasta hacer hover
+      "pulseaudio/slider"
+      // "cpu",
+      // "memory"
     ]
-},
-"group/performance": {
+  },
+  "group/performance": {
     "orientation": "inherit",
     "drawer": {
-        "transition-duration": 250,
-        "children-class": "drawer-child"
+      "transition-duration": 250,
+      "children-class": "drawer-child"
     },
     "modules": [
-        // "clock",        // <-- Este es el líder, siempre visible
-        "battery",      // <-- Estos son los hijos,
-        // "pulseaudio",   //     se ocultan hasta hacer hover
-        // "pulseaudio/slider"
-        "cpu",
-        "memory"
+      // "clock",        // <-- Este es el líder, siempre visible
+      "battery", // <-- Estos son los hijos,
+      // "pulseaudio",   //     se ocultan hasta hacer hover
+      // "pulseaudio/slider"
+      "cpu",
+      "memory",
+      "temperature"
     ]
-},
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
+  },
   "mpris": {
-  "max-length": 20,
-	"format": "{player_icon} {dynamic}",
-	"format-paused": "{status_icon} {dynamic}",
-	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸"
-	}
-},
+    "max-length": 20,
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    }
+  },
   "custom/weather": {
     "exec": "${HOME}/.config/waybar/scripts/weather.sh Havana+Cuba",
     "return-type": "json",
@@ -159,12 +167,12 @@
     "display-format": "{icon}  {artist} - {title}",
     "exec": "~/.config/waybar/scripts/waybar-scrolling-mpris /home/mich/.config/waybar/config.jsonc",
     "icons": {
-        "Paused": "⏸",
-        "Playing": "▶",
-        "Stopped": "■"
+      "Paused": "⏸",
+      "Playing": "▶",
+      "Stopped": "■"
     },
     "length": 30
-},
+  },
   "memory": {
     "interval": 1,
     "format": "{used:4}GB ",
@@ -254,12 +262,12 @@
     }
   },
   "custom/arch": {
-      "format": "{}",
-      "exec": "~/.config/waybar/scripts/arch.sh",
-      "interval": "once",  // Solo se ejecuta una vez
-      "tooltip": false,     // Sin tooltip (opcional)
-      "on-click": "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh"  // Opcional: abre el lanzador al hacer clic
-      // "icon-size": 21
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/arch.sh",
+    "interval": "once", // Solo se ejecuta una vez
+    "tooltip": false, // Sin tooltip (opcional)
+    "on-click": "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh" // Opcional: abre el lanzador al hacer clic
+    // "icon-size": 21
   },
   "custom/separator": {
     "format": "{}",
