@@ -1,5 +1,5 @@
 configuration {
-    font: "Iosevka Nerd Font Propo 13";
+    font: "Iosevka Nerd Font Propo 16";
     show-icons: true;
     icon-theme: "Papirus";
 }
@@ -9,12 +9,13 @@ window {
     // border-color: #00000000;
     border-radius: 16px;
     padding: 16px;
-    width: 460px;
-    height: 180px;
+    width: 500px;
+    height: 210px;
     location: center;
     anchor: center;
-    margin: 0px;
+    margin: 12px;
     transparency: "real";
+    location: north;
 }
 
 mainbox {

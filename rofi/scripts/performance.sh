@@ -52,6 +52,10 @@ if [ -n "$SELECTED" ] && [ "$SELECTED" != "$CURRENT" ]; then
   powerprofilesctl set "$SELECTED"
   if [ "$SELECTED" == "power-saver" ]; then
     brightnessctl set 100
+  elif
+    [ "$SELECTED" == "balanced" ]
+  then
+    brightnessctl set 45000
   else
     brightnessctl set 96000
   fi
