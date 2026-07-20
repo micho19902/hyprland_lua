@@ -6,6 +6,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 #end
 
+alias df='duf'
+
 abbr -a yyu yay -Syu --noconfirm
 abbr -a y yay -Ssy
 abbr -a yy yay --noconfirm --needed
