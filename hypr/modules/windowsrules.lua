@@ -36,13 +36,14 @@ hl.workspace_rule({ workspace = "3", monitor = "eDP-1", persistent = true })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
 
-hl.window_rule({
-	name = "apply-something",
-	match = {
-		class = "com.gabm.satty",
-	},
-	float = true,
-})
+-- hl.layer_rule({
+-- 	name = "apply-something",
+-- 	match = {
+-- 		namespace = "swaync-control-center",
+-- 	},
+-- 	blur = true,
+-- 	ignore_alpha = 0.5,
+-- })
 
 -- hl.window_rule({
 -- 	name = "apply-something",
