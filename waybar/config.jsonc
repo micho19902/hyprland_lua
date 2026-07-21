@@ -80,7 +80,7 @@
   },
   "custom/pacman": {
     "format": "󰅧 {}",
-    "interval": 3600,
+    "interval": 600,
     "exec": "~/.config/waybar/scripts/pacman.sh",
     "on-click": "ghostty -e sudo pacman -Syu --noconfirm; pkill -SIGRTMIN+8 waybar",
     "signal": 8,
@@ -222,7 +222,7 @@
   },
   "clock": {
     "format": "{:%H:%M}",
-    // "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+    "format-alt": "{:%A, %B %d, %Y (%R)}  ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
