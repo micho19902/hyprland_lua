@@ -37,14 +37,10 @@ hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
 
 -- hl.layer_rule({
--- 	name = "apply-something",
--- 	match = {
--- 		namespace = "swaync-control-center",
--- 	},
+-- 	match = { namespace = "swaync-control-center" },
 -- 	blur = true,
 -- 	ignore_alpha = 0.5,
 -- })
-
 -- hl.window_rule({
 -- 	name = "apply-something",
 -- 	match = {

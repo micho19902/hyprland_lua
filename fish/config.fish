@@ -8,6 +8,9 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 alias df='duf'
 
+abbr -a ii sudo pacman -Sy --needed
+abbr -a i sudo pacman -Ssy
+
 abbr -a yyu yay -Syu --noconfirm
 abbr -a y yay -Ssy
 abbr -a yy yay --noconfirm --needed
