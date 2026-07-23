@@ -5,15 +5,15 @@ configuration {
 }
 
 window {
-    background-color: rgba(42, 41, 41, 0.67);
-    // border-color: #00000000;
-    border-radius: 16px;
+    background-color: rgba(42, 41, 41, 0.8);
+    border-color: #00000000;
+    border-radius: 99px;
     padding: 16px;
-    width: 500px;
-    height: 210px;
+    // width: 800px;
+    // height: 210px;
     location: center;
     anchor: center;
-    margin: 12px;
+    margin: 30px;
     transparency: "real";
     location: north;
 }
@@ -37,19 +37,22 @@ entry {
 element {
     background-color: transparent;
     padding: 8px 12px;
-    border-radius: 10px;
-    text-color: #000000;
+    border-radius: 99px;
+    text-color: white;
+    size: 20;
 }
 
 element selected {
-    background-color: transparent;
+    background-color: #89b4fa;
     // border-radius: 16px;
-    text-color: #000000;
+    text-color: green;
     border: 2;
     border-color: #3161ba;
 }
 
 element-text {
+  font: 'Iosevka Nerd Font Propo 32';
+
     text-color: white;
     background-color: transparent;
 }
@@ -57,14 +60,14 @@ element-text {
 element-icon {
 
     background-color: transparent;
-    size: 1.2em;
-    margin: 0px 8px 0px 0px;
+    // size: 1.2em;
+    // margin: 0px 8px 0px 0px;
 }
 
 
 listview {
     // scrollbar: false;
-    // lines: 4;
+    // lines: 1;
     // columns: 1;
     // spacing: 6px;
     background-color: transparent;

@@ -9,7 +9,7 @@ local fileManager = "ghostty -e yazi"
 -- local menu        = "rofi -show drun"
 local menu = "/home/mich/.config/rofi/launchers/type-6/launcher.sh"
 local powermenu = "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh"
-local performance = "/home/mich/.config/rofi/scripts/performance.sh"
+local performance = "/home/mich/.config/rofi/scripts/performance2.sh"
 local volume_level = "wpctl get-volume 65"
 
 ---------------------
