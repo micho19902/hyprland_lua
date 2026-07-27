@@ -2,7 +2,7 @@
   "layer": "top",
   "width": 1930,
   "output": "eDP-1",
-  "margin-top": 4,
+  "margin-top": 2,
   "modules-left": [
     "custom/arch",
     "clock",
