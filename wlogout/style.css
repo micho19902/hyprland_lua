@@ -23,7 +23,6 @@ button {
 
 button:focus,
 button:active {
-  /* button:hover { */
   background-color: #3700B3;
   outline-style: none;
   transition: all 0.2s ease-in-out;
