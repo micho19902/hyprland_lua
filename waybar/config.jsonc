@@ -49,8 +49,8 @@
       // "pulseaudio/slider"
       "cpu",
       "memory",
-      "temperature",
-      "backlight"
+      "temperature"
+      // "backlight"
     ]
   },
   "temperature": {
@@ -267,7 +267,7 @@
     "exec": "~/.config/waybar/scripts/arch.sh",
     "interval": "once", // Solo se ejecuta una vez
     "tooltip": false, // Sin tooltip (opcional)
-    "on-click": "/home/mich/.config/rofi/powermenu/type-6/powermenu.sh" // Opcional: abre el lanzador al hacer clic
+    "on-click": "/home/mich/.config/rofi/launchers/type-6/launcher.sh" // Opcional: abre el lanzador al hacer clic
     // "icon-size": 21
   },
   "custom/separator": {
