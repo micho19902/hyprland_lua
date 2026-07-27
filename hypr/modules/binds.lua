@@ -45,7 +45,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 
-hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("hyprcap rec region -w -c -n -o ~/Pictures/Screenshots/"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
