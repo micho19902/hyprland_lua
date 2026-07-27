@@ -8,6 +8,7 @@ aria2
 aspell-es
 awesome-terminal-fonts
 awww
+baobab
 base
 base-devel
 bash-completion
@@ -44,11 +45,13 @@ cachyos-v4-mirrorlist
 cachyos-wallpapers
 cachyos-zsh-config
 cantarell-fonts
+cava
 chwd
 cpupower
 cryptsetup
 cups
 ddrescue
+deepin-calculator
 device-mapper
 diffutils
 discord
@@ -196,6 +199,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntfsprogs
+nwg-look
 okular
 onlyoffice-bin
 opencl-icd-loader
@@ -230,6 +234,7 @@ reflector
 remmina
 ripgrep
 rofi
+rofi-emoji
 rsync
 s-nail
 samba
@@ -280,6 +285,7 @@ which
 wine-staging
 wireplumber
 wl-clipboard
+wlogout
 wofi
 wpa_supplicant
 xdg-desktop-portal-hyprland

@@ -7,7 +7,7 @@
 }
 
 tooltip {
-  background-color: rgb(51, 55, 59);
+  background-color: rgba(42, 41, 41, 0.8);
   /* Fondo semi-transparente */
   border-radius: 10px;
 }

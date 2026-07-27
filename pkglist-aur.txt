@@ -2,6 +2,7 @@ adwaita-dark
 balena-etcher
 bibata-cursor-theme
 google-chrome
+hyprcap
 hyprls
 peazip-qt-bin
 proton-authenticator-bin
@@ -9,6 +10,7 @@ proton-vpn-qt-app
 qimgv-git
 rustdesk-bin
 termite
+ttf-font-awesome-5
 ttf-orbitron
 visual-studio-code-bin
 waybar-cava
