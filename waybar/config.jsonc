@@ -309,7 +309,7 @@
       ]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
+    "on-click": "ghostty -e wiremix",
     "ignored-sinks": [
       "Easy Effects Sink"
     ]
