@@ -6,8 +6,9 @@ configuration {
 
 window {
     background-color: rgba(42, 41, 41, 0.8);
-    border-color: #00000000;
+    border-color: rgba(75, 78, 196, 0.8);
     border-radius: 99px;
+    border: 2px;
     padding: 16px;
     // width: 800px;
     // height: 210px;

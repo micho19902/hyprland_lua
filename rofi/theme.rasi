@@ -12,10 +12,11 @@ window{
     fullscreen:                  false;
     transparency:                "real";
     width:                       90%;
-    border-color:                transparent;
+    border-color: rgba(75, 78, 196, 0.8);
     transparency:                "real";
     background-color:            #00000090;
     border-radius:               2em;
+    border: 2px;
 }
 
 mainbox {

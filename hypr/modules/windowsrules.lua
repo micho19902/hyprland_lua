@@ -36,15 +36,26 @@ hl.workspace_rule({ workspace = "3", monitor = "eDP-1", persistent = true })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1", persistent = true })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
 
--- hl.layer_rule({
--- 	match = { namespace = "swaync-control-center" },
--- 	blur = true,
--- 	ignore_alpha = 0.5,
--- })
--- hl.window_rule({
--- 	name = "apply-something",
--- 	match = {
--- 		class = "",
--- 	},
--- 	opacity = 0.5,
--- })
+hl.layer_rule({
+	match = { namespace = "swaync-control-center" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+
+hl.layer_rule({
+	match = { namespace = "swaync-notification-window" },
+	blur = true,
+	ignore_alpha = 0.5,
+})
+hl.layer_rule({
+	match = { namespace = "rofi" },
+	blur = true,
+	ignore_alpha = 0.3,
+})
+hl.window_rule({
+	name = "apply-something",
+	match = {
+		class = "",
+	},
+	opacity = 0.5,
+})

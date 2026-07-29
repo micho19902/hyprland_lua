@@ -11,7 +11,7 @@ window {
     border: 2px;
     padding: 16px;
     width: 800px;
-    height: 410px;
+    height: 800px;
     // location: center;
     // anchor: center;
     margin: 30px;
@@ -20,25 +20,14 @@ window {
 }
 
 * {
-   background-color: rgba(42, 41, 41, 0.8);
-
-  }
-#fr {
-   background-color: rgba(42, 41, 41, 0.8);
-
-  }
-#ns {
-     background-color: rgba(42, 41, 41, 0.8);
+   background-color: transparent;
 
   }
 
-mainbox {
-        background-color: transparent;
-}
 
 prompt {
     text-color: #ffffff;
-    background-color: rgba(42, 41, 41, 0.8);
+    background-color: transparent;
   }
 
 
@@ -47,7 +36,7 @@ prompt {
     enabled: true;
     padding: 20;
     border-radius: 16;
-    background-color: rgba(42, 41, 41, 0.8);
+    background-color: transparent;
  }
 
 entry {
