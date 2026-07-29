@@ -1,0 +1,108 @@
+configuration {
+    font: "Iosevka Nerd Font Propo 16";
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+window {
+    background-color: rgba(42, 41, 41, 0.8);
+    border-color: rgba(75, 78, 196, 0.8);
+    border-radius: 10px;
+    border: 2px;
+    padding: 16px;
+    width: 800px;
+    height: 410px;
+    // location: center;
+    // anchor: center;
+    margin: 30px;
+    transparency: "real";
+    // location: north;
+}
+
+* {
+   background-color: rgba(42, 41, 41, 0.8);
+
+  }
+#fr {
+   background-color: rgba(42, 41, 41, 0.8);
+
+  }
+#ns {
+     background-color: rgba(42, 41, 41, 0.8);
+
+  }
+
+mainbox {
+        background-color: transparent;
+}
+
+prompt {
+    text-color: #ffffff;
+    background-color: rgba(42, 41, 41, 0.8);
+  }
+
+
+
+ inputbar {
+    enabled: true;
+    padding: 20;
+    border-radius: 16;
+    background-color: rgba(42, 41, 41, 0.8);
+ }
+
+entry {
+    text-color: #ffffff;
+    placeholder-color: #666666;
+    placeholder: "Buscar...";
+    margin: 0px 10px;
+    background-color: inherit;
+    border: 1px;
+    border-color: rgba(75, 78, 196, 0.8);
+    border-radius: 99px;
+    padding: 0px 20px;
+}
+
+element {
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 99px;
+    text-color: white;
+    size: 20;
+}
+
+element selected {
+    background-color: #89b4fa60;
+    // border-radius: 16px;
+    text-color: green;
+    border: 2;
+    border-color: #3161ba;
+}
+
+element-text {
+  font: 'Iosevka Nerd Font Propo 14';
+
+    text-color: white;
+    background-color: transparent;
+}
+
+element-icon {
+
+    background-color: transparent;
+    // size: 1.2em;
+    // margin: 0px 8px 0px 0px;
+}
+
+
+listview {
+    // scrollbar: false;
+    // lines: 1;
+    // columns: 1;
+    // spacing: 6px;
+    background-color: transparent;
+}
+
+dummy {
+    width:                       2em;
+    expand:                      false;
+    background-color:            transparent;
+}

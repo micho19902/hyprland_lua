@@ -42,6 +42,12 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("ghostty -e bluetui"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("Telegram"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("/home/mich/.config/wall-engine/wall2.sh"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(
+	mainMod .. " + C",
+	hl.dsp.exec_cmd(
+		"cliphist list | rofi -dmenu -display-columns 2 -p 'Clipboard' -theme ~/.config/rofi/clipboard.rasi | cliphist decode | wl-copy"
+	)
+)
 
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m region --raw | satty --filename -"))
 

@@ -24,4 +24,6 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd(
 	-- 	'mpvpaper -vs -o "loop" eDP-1 /home/mich/Pictures/anime-girl-sword-blue-eyes-live-wallpaper-wallsflow-com.mp4'
 	-- )
+	hl.exec_cmd("wl-paste --type text --watch cliphist store")
+	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)
