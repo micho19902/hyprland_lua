@@ -54,7 +54,7 @@ entry {
 element {
     background-color: transparent;
     padding: 8px 12px;
-    border-radius: 99px;
+    border-radius: 10px;
     text-color: white;
     size: 20;
 }

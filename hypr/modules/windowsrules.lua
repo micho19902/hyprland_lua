@@ -59,3 +59,11 @@ hl.window_rule({
 	},
 	opacity = 0.5,
 })
+
+hl.window_rule({
+	name = "satty no tiling",
+	match = {
+		class = "com.gabm.satty",
+	},
+	float = 1,
+})
