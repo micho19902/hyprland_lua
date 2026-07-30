@@ -67,3 +67,20 @@ hl.window_rule({
 	},
 	float = 1,
 })
+
+hl.window_rule({
+	name = "vlc",
+	match = {
+		class = "vlc",
+	},
+	float = 1,
+})
+
+-- hl.window_rule({
+-- 	name = "ghostty",
+-- 	match = {
+-- 		class = "com.mitchellh.ghostty",
+-- 	},
+-- 	blur = true,
+-- 	ignore_alpha = 0.3,
+-- })

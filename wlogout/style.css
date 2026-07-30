@@ -17,16 +17,18 @@ button {
   border-width: 1px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25%;
-  margin: 8px;
+  background-size: 15%;
+  margin: 12px;
   font-size: 20px;
 }
 
 button:focus,
 button:active {
-  background-color: #3700B3;
+  background-color: rgba(39, 133, 245, 0.76);
   outline-style: none;
   transition: all 0.2s ease-in-out;
+  background-size: 30%;
+
 }
 
 #lock {
