@@ -76,6 +76,14 @@ hl.window_rule({
 	float = 1,
 })
 
+hl.window_rule({
+	name = "thunar copy",
+	match = {
+		class = "thunar",
+		title = "File Operation Progress",
+	},
+	float = 1,
+})
 -- hl.window_rule({
 -- 	name = "ghostty",
 -- 	match = {
