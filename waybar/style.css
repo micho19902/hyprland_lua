@@ -243,6 +243,10 @@ window#waybar {
   /* padding: 0px 8px;  */
 }
 
+#pulseaudio.bluetooth {
+  color: #00a6ff;
+}
+
 #pulseaudio-slider {
   padding: 0;
   margin: 12px;
