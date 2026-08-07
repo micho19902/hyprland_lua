@@ -40,6 +40,7 @@ hl.layer_rule({
 	match = { namespace = "swaync-control-center" },
 	blur = true,
 	ignore_alpha = 0.5,
+	animation = "slidefade top",
 })
 
 hl.layer_rule({
