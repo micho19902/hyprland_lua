@@ -4,8 +4,8 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
-    mode     = "highres",
-    position = "auto",
-    scale    = "1",
+	output = "",
+	mode = "highres",
+	position = "auto",
+	scale = "1",
 })
