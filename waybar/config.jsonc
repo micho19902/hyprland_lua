@@ -83,7 +83,7 @@
     "format": "󰅧 {}",
     "interval": 600,
     "exec": "~/.config/waybar/scripts/pacman.sh",
-    "on-click": "ghostty -e sudo pacman -Syu --noconfirm; pkill -SIGRTMIN+8 waybar",
+    "on-click": "ghostty -e sudo shelly --no-confirm; pkill -SIGRTMIN+8 waybar",
     "signal": 8,
     "tooltip-format": "{} actualizaciones disponibles",
     "return-type": "text"
