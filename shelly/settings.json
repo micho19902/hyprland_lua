@@ -1,5 +1,5 @@
 {
-  "Culture": "",
+  "Culture": "es",
   "NewInstall": false,
   "NoConfirm": false,
   "AurEnabled": true,
@@ -14,7 +14,7 @@
   "WebviewEnabled": false,
   "DefaultPageDropDown": "packages",
   "NavMode": "sidebar",
-  "WindowLastWidth": 945,
+  "WindowLastWidth": 964,
   "WindowLastHeight": 1025,
   "PackageInstallView": "grid",
   "PackageManagementCascadeDelete": true,
@@ -35,11 +35,11 @@
   "SearchShowDetailPane": false,
   "TrayEnabled": true,
   "TrayAutoStart": false,
-  "TrayCheckIntervalHours": 72,
+  "TrayCheckIntervalHours": 1,
   "UseSymbolicTray": true,
   "TrayIconPath": "",
   "TrayUpdatesIconPath": "",
   "UseWeeklySchedule": false,
   "DaysOfWeek": [],
-  "Time": ""
+  "Time": "00:00"
 }
