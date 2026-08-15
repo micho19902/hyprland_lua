@@ -1,4 +1,5 @@
 #!/bin/bash
+# count=$(shelly list-updates all 2>/dev/null | grep -c "upgrade")
 count=$(checkupdates 2>/dev/null | wc -l)
 if [ "$count" -gt 0 ]; then
   echo "$count"

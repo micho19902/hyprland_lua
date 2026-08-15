@@ -9,7 +9,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 alias df='duf'
 
 abbr -a ii shelly --no-confirm
-abbr -a i shelly -Ssa
+abbr -a i shelly -Ssaf
 
 # abbr -a ii sudo pacman -Sy --noconfirm
 # abbr -a i sudo pacman -Ssy 
