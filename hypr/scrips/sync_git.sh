@@ -1,7 +1,7 @@
 #! /bin/bash
 
 cd ~
-cp .config/shelly .config/tmux .themes .config/hypr .config/wlogout .config/yazi .config/waybar .config/rofi .config/dunst .config/swaync .config/wall-engine .config/fish Documents/hyprland/ -rfv
+cp .config/fastfetch .config/shelly .config/tmux .themes .config/hypr .config/wlogout .config/yazi .config/waybar .config/rofi .config/dunst .config/swaync .config/wall-engine .config/fish Documents/hyprland/ -rfv
 cd Documents/hyprland
 git add .
 git commit -m "$1"
